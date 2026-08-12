@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-title-es="Pedidos — Gerardo's" data-title-en="Order — Gerardo's">Pedidos — Gerardo's</title>
+<meta name="description" content="Pedí Gerardo's directo para Pachuca, Hidalgo y Ciudad de México. Pago en efectivo contra entrega, envíos los viernes.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo_mark_alpha.png" alt="Gerardo's mark">
+      <img src="assets/img/logo_wordmark_alpha.png" alt="Gerardo's" class="wordmark">
+    </a>
+    <nav class="primary">
+      <a href="index.html" data-es>Inicio</a><a href="index.html" data-en>Home</a>
+      <a href="historia.html" data-es>Nuestra Historia</a><a href="historia.html" data-en>Our Story</a>
+      <a href="vinos.html" data-es>Vinos</a><a href="vinos.html" data-en>Wines</a>
+      <a href="tienda.html" data-es>Tienda</a><a href="tienda.html" data-en>Shop</a>
+      <a href="pedido.html" class="active" data-es>Pedidos</a><a href="pedido.html" class="active" data-en>Order</a>
+      <a href="contacto.html" data-es>Contacto</a><a href="contacto.html" data-en>Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button data-set="es">ES</button>
+        <button data-set="en">EN</button>
+      </div>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" data-es>Pedidos directos</div>
+    <div class="eyebrow" data-en>Direct orders</div>
+    <h1 data-es>Armá tu pedido, nosotros lo llevamos</h1>
+    <h1 data-en>Build your order, we'll bring it to you</h1>
+    <p class="lede" data-es>Entrega directa en Pachuca, Hidalgo y Ciudad de M&eacute;xico. Pago en efectivo contra entrega, todos los pedidos se reparten los viernes.</p>
+    <p class="lede" data-en>Direct delivery to Pachuca, Hidalgo and Mexico City. Cash on delivery, every order goes out on Fridays.</p>
+  </div>
+</section>
+
+<section class="section-pad-sm" style="padding-top:0;">
+  <div class="container">
+    <div class="order-info-grid reveal">
+      <div class="order-info-item">
+        <div class="oi-ic">&#8594;</div>
+        <h4 data-es>Entrega</h4><h4 data-en>Delivery</h4>
+        <p data-es>Todos los pedidos se entregan los viernes. Coordinamos el horario por WhatsApp o correo.</p>
+        <p data-en>All orders are delivered on Fridays. We'll confirm the time by WhatsApp or email.</p>
+      </div>
+      <div class="order-info-item">
+        <div class="oi-ic">$</div>
+        <h4 data-es>Pago</h4><h4 data-en>Payment</h4>
+        <p data-es>Efectivo contra entrega. Sin pagos anticipados en l&iacute;nea.</p>
+        <p data-en>Cash on delivery. No advance online payment required.</p>
+      </div>
+      <div class="order-info-item">
+        <div class="oi-ic">6</div>
+        <h4 data-es>M&iacute;nimo</h4><h4 data-en>Minimum</h4>
+        <p data-es>Pedido m&iacute;nimo de 6 botellas, combinables entre var&iacute;etales.</p>
+        <p data-en>6-bottle minimum, mix and match across varietals.</p>
+      </div>
+      <div class="order-info-item">
+        <div class="oi-ic">&#9670;</div>
+        <h4 data-es>Zona</h4><h4 data-en>Area</h4>
+        <p data-es>Pachuca, Hidalgo y Ciudad de M&eacute;xico por ahora.</p>
+        <p data-en>Pachuca, Hidalgo and Mexico City for now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad-sm" style="padding-top:0;">
+  <div class="container">
+    <div class="order-layout">
+
+      <div class="reveal">
+        <h3 class="order-h3" data-es>1. Eleg&iacute; tus vinos</h3>
+        <h3 class="order-h3" data-en>1. Choose your wines</h3>
+
+        <div class="order-items" id="order-items">
+
+          <div class="order-item" data-name-es="Malbec Gran Reserva 2020" data-name-en="Malbec Gran Reserva 2020" data-price="719">
+            <img src="assets/img/bottle_granreserva.jpg" alt="Malbec Gran Reserva 2020">
+            <div class="oi-info">
+              <h4>Malbec Gran Reserva <span data-es>2020</span><span data-en>2020</span></h4>
+              <div class="oi-price">$719.00 MXN</div>
+            </div>
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" data-dir="-1" aria-label="menos">&minus;</button>
+              <input type="number" class="qty-input" min="0" value="0" inputmode="numeric">
+              <button type="button" class="qty-btn" data-dir="1" aria-label="m&aacute;s">+</button>
+            </div>
+          </div>
+
+          <div class="order-item" data-name-es="Malbec 2023" data-name-en="Malbec 2023" data-price="429">
+            <img src="assets/img/bottle_malbec.jpg" alt="Malbec 2023">
+            <div class="oi-info">
+              <h4>Malbec <span data-es>2023</span><span data-en>2023</span></h4>
+              <div class="oi-price">$429.00 MXN</div>
+            </div>
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" data-dir="-1" aria-label="menos">&minus;</button>
+              <input type="number" class="qty-input" min="0" value="0" inputmode="numeric">
+              <button type="button" class="qty-btn" data-dir="1" aria-label="m&aacute;s">+</button>
+            </div>
+          </div>
+
+          <div class="order-item" data-name-es="Cabernet Franc 2024" data-name-en="Cabernet Franc 2024" data-price="439">
+            <img src="assets/img/bottle_cabfranc.jpg" alt="Cabernet Franc 2024">
+            <div class="oi-info">
+              <h4>Cabernet Franc <span data-es>2024</span><span data-en>2024</span></h4>
+              <div class="oi-price">$439.00 MXN</div>
+            </div>
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" data-dir="-1" aria-label="menos">&minus;</button>
+              <input type="number" class="qty-input" min="0" value="0" inputmode="numeric">
+              <button type="button" class="qty-btn" data-dir="1" aria-label="m&aacute;s">+</button>
+            </div>
+          </div>
+
+          <div class="order-item" data-name-es="Chardonnay 2024" data-name-en="Chardonnay 2024" data-price="349">
+            <img src="assets/img/bottle_chardonnay.jpg" alt="Chardonnay 2024">
+            <div class="oi-info">
+              <h4>Chardonnay <span data-es>2024</span><span data-en>2024</span></h4>
+              <div class="oi-price">$349.00 MXN</div>
+            </div>
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" data-dir="-1" aria-label="menos">&minus;</button>
+              <input type="number" class="qty-input" min="0" value="0" inputmode="numeric">
+              <button type="button" class="qty-btn" data-dir="1" aria-label="m&aacute;s">+</button>
+            </div>
+          </div>
+
+          <div class="order-item" data-name-es="Pinot Noir 2024" data-name-en="Pinot Noir 2024" data-price="369">
+            <img src="assets/img/bottle_pinot.jpg" alt="Pinot Noir 2024">
+            <div class="oi-info">
+              <h4>Pinot Noir <span data-es>2024</span><span data-en>2024</span></h4>
+              <div class="oi-price">$369.00 MXN</div>
+            </div>
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" data-dir="-1" aria-label="menos">&minus;</button>
+              <input type="number" class="qty-input" min="0" value="0" inputmode="numeric">
+              <button type="button" class="qty-btn" data-dir="1" aria-label="m&aacute;s">+</button>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="order-h3" style="margin-top:48px;" data-es>2. Tus datos</h3>
+        <h3 class="order-h3" style="margin-top:48px;" data-en>2. Your details</h3>
+
+        <form class="contact-form" id="order-form" name="pedido" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="pedido">
+          <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+
+          <div class="field">
+            <label data-es>Nombre completo</label><label data-en>Full name</label>
+            <input type="text" id="f-name" name="name" required>
+          </div>
+          <div class="field">
+            <label data-es>Tel&eacute;fono</label><label data-en>Phone</label>
+            <input type="tel" id="f-phone" name="phone" required>
+          </div>
+          <div class="field">
+            <label data-es>Zona de entrega</label><label data-en>Delivery area</label>
+            <select id="f-zone" name="zone" required>
+              <option value="" data-es data-en disabled selected></option>
+              <option value="Pachuca, Hidalgo">Pachuca, Hidalgo</option>
+              <option value="Ciudad de México" data-es>Ciudad de M&eacute;xico</option>
+              <option value="Mexico City" data-en>Mexico City</option>
+            </select>
+          </div>
+          <div class="field">
+            <label data-es>Direcci&oacute;n de entrega</label><label data-en>Delivery address</label>
+            <textarea id="f-address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="field">
+            <label data-es>Notas (opcional)</label><label data-en>Notes (optional)</label>
+            <textarea id="f-notes" name="notes" rows="2"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="order-summary">
+          <h3 class="order-h3" data-es>Resumen</h3>
+          <h3 class="order-h3" data-en>Summary</h3>
+
+          <div id="summary-lines" class="summary-lines">
+            <p class="summary-empty" data-es>A&uacute;n no eleg&iacute;s vinos.</p>
+            <p class="summary-empty" data-en>You haven't chosen any wines yet.</p>
+          </div>
+
+          <hr class="hairline">
+
+          <div class="summary-row">
+            <span data-es>Subtotal</span><span data-en>Subtotal</span>
+            <span id="sum-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span data-es>Env&iacute;o</span><span data-en>Delivery</span>
+            <span id="sum-shipping">$180.00</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span data-es>Total</span><span data-en>Total</span>
+            <span id="sum-total">$180.00</span>
+          </div>
+
+          <p id="min-warning" class="min-warning" data-es>Pedido m&iacute;nimo: 6 botellas &mdash; llev&aacute;s <span id="min-count">0</span>.</p>
+          <p id="min-warning-en" class="min-warning" data-en>6-bottle minimum &mdash; you have <span id="min-count-en">0</span>.</p>
+
+          <div class="order-actions">
+            <button type="button" id="btn-whatsapp" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:14px;" disabled>
+              <span data-es>Ordenar por WhatsApp</span><span data-en>Order via WhatsApp</span>
+            </button>
+            <button type="button" id="btn-email" class="btn" style="width:100%;justify-content:center;" disabled>
+              <span data-es>Ordenar por correo</span><span data-en>Order via email</span>
+            </button>
+          </div>
+
+          <p class="order-fine" data-es>Al enviar tu pedido, te contactamos para confirmar disponibilidad y horario de entrega del viernes.</p>
+          <p class="order-fine" data-en>Once you send your order, we'll reach out to confirm availability and your Friday delivery window.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/img/logo_wordmark_alpha.png" alt="Gerardo's"></div>
+        <p data-es>Vinos de alta gama del Valle de Uco, Mendoza, Argentina.</p>
+        <p data-en>Premium wines from the Uco Valley, Mendoza, Argentina.</p>
+      </div>
+      <div>
+        <h5 data-es>Navegar</h5><h5 data-en>Navigate</h5>
+        <a href="index.html" data-es>Inicio</a><a href="index.html" data-en>Home</a>
+        <a href="historia.html" data-es>Nuestra Historia</a><a href="historia.html" data-en>Our Story</a>
+        <a href="vinos.html" data-es>Vinos</a><a href="vinos.html" data-en>Wines</a>
+        <a href="tienda.html" data-es>Tienda</a><a href="tienda.html" data-en>Shop</a>
+        <a href="pedido.html" data-es>Pedidos</a><a href="pedido.html" data-en>Order</a>
+        <a href="contacto.html" data-es>Contacto</a><a href="contacto.html" data-en>Contact</a>
+      </div>
+      <div>
+        <h5 data-es>Vinos</h5><h5 data-en>Wines</h5>
+        <a href="malbec-gran-reserva.html">Malbec Gran Reserva</a>
+        <a href="malbec.html">Malbec</a>
+        <a href="cabernet-franc.html">Cabernet Franc</a>
+        <a href="chardonnay.html">Chardonnay</a>
+        <a href="pinot-noir.html">Pinot Noir</a>
+      </div>
+      <div>
+        <h5 data-es>Contacto</h5><h5 data-en>Contact</h5>
+        <a href="mailto:oscar.chavez@vinosgerardos.com">oscar.chavez@vinosgerardos.com</a>
+        <a href="tel:+525661527154">+52 56 6152 7154</a>
+        <p class="addr" data-es>Valle de Uco, Mendoza, Argentina</p>
+        <p class="addr" data-en>Uco Valley, Mendoza, Argentina</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Gerardo's &mdash; Valle de Uco, Mendoza, Argentina</span>
+      <span data-es>Elaborado en Finca Don Carlos</span><span data-en>Estate crafted at Finca Don Carlos</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pedido.js"></script>
+</body>
+</html>
