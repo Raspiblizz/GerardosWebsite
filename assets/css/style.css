@@ -183,6 +183,13 @@ nav.primary a.active::after{
   position:relative;min-height:100vh;display:flex;align-items:flex-end;
   overflow:hidden;background:#000;
 }
+.hero-mark{
+  position:absolute;top:110px;left:32px;z-index:2;
+  height:44px;width:auto;opacity:.92;
+}
+.story-flow{display:flex;gap:40px;align-items:flex-start;}
+.story-flow .story-mark{height:56px;width:auto;flex-shrink:0;margin-top:6px;opacity:.9;}
+@media (max-width:640px){.story-flow{flex-direction:column;gap:20px;}.story-flow .story-mark{height:40px;}}
 .hero img.hero-bg{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;
   opacity:.88;
