@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var SHIPPING = 180;
+  var SHIPPING = 100;
   var MIN_BOTTLES = 6;
   var WHATSAPP_NUMBER = "529989063867"; /* +52 998 906 3867 */
   var ORDER_EMAIL = "oscar.chavez@vinosgerardos.com";
