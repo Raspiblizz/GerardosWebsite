@@ -139,7 +139,8 @@ html[data-lang="en"] .footer-grid a[data-en]{display:block !important;}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:24px;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:30px;width:auto;}
-.brand .wordmark{height:22px;}
+.brand .wordmark{height:30px;}
+.nav-mark{height:26px;width:auto;opacity:.95;}
 nav.primary{display:flex;align-items:center;gap:34px;}
 nav.primary a{
   font-family:var(--utility);
@@ -182,10 +183,6 @@ nav.primary a.active::after{
 .hero{
   position:relative;min-height:100vh;display:flex;align-items:flex-end;
   overflow:hidden;background:#000;
-}
-.hero-mark{
-  position:absolute;top:110px;left:32px;z-index:2;
-  height:44px;width:auto;opacity:.92;
 }
 .story-flow{display:flex;gap:40px;align-items:flex-start;}
 .story-flow .story-mark{height:56px;width:auto;flex-shrink:0;margin-top:6px;opacity:.9;}
