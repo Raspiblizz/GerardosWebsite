@@ -140,7 +140,7 @@ html[data-lang="en"] .footer-grid a[data-en]{display:block !important;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:30px;width:auto;}
 .brand .wordmark{height:30px;}
-.nav-mark{height:26px;width:auto;opacity:.95;}
+.nav-mark{height:26px;width:auto;opacity:.95;margin-left:10px;}
 nav.primary{display:flex;align-items:center;gap:34px;}
 nav.primary a{
   font-family:var(--utility);
