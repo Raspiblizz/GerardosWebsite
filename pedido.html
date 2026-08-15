@@ -156,9 +156,8 @@
         <h3 class="order-h3" style="margin-top:48px;" data-es>2. Tus datos</h3>
         <h3 class="order-h3" style="margin-top:48px;" data-en>2. Your details</h3>
 
-        <form class="contact-form" id="order-form" name="pedido" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="pedido">
-          <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+        <form class="contact-form" id="order-form" name="pedido" method="POST" action="order-handler.php">
+          <p style="position:absolute;left:-9999px;" aria-hidden="true"><label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
           <div class="field">
             <label data-es>Nombre completo</label><label data-en>Full name</label>

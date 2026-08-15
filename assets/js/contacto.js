@@ -1,4 +1,4 @@
-/* Gerardo's — contact form (Netlify Forms submission) */
+/* Gerardo's — contact form (PHP mail handler submission) */
 (function () {
   "use strict";
 
@@ -42,7 +42,6 @@
       var message = document.getElementById("c-message").value.trim();
 
       var payload = {
-        "form-name": "contacto",
         name: name,
         email: email,
         subject: subject,
@@ -51,7 +50,7 @@
 
       submitBtn.disabled = true;
 
-      fetch("/", {
+      fetch("contact-handler.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode(payload)

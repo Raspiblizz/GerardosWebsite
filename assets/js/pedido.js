@@ -188,11 +188,10 @@
         return l.nameEs + " x" + l.qty;
       }).join(", ");
       try {
-        fetch("/", {
+        fetch("order-handler.php", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
-            "form-name": "pedido",
             name: document.getElementById("f-name").value.trim(),
             phone: document.getElementById("f-phone").value.trim(),
             zone: document.getElementById("f-zone").value,
