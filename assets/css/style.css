@@ -144,6 +144,7 @@ html[data-lang="en"] .footer-grid a[data-en]{display:block !important;}
 .brand img{height:30px;width:auto;}
 .brand .wordmark{height:30px;}
 .nav-mark{height:26px;width:auto;opacity:.95;margin-left:10px;}
+.brand-mark{height:28px;width:auto;opacity:.95;}
 nav.primary{display:flex;align-items:center;gap:34px;}
 nav.primary a{
   font-family:var(--utility);
