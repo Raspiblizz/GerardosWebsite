@@ -1,5 +1,5 @@
-﻿/* ============================================================
-   GERARDO'S â€” stylesheet
+/* ============================================================
+   GERARDO'S — stylesheet
    Tokens
    Background   #0B0B0A  (warm near-black)
    Panel        #141310  (raised panel / cards)
@@ -301,20 +301,6 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;}
 }
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
 .footer-brand img{height:40px;}
-.social-icons {
-  display: flex;
-  gap: 16px;
-  margin-top: 18px;
-}
-.social-icons a {
-  display: inline-flex !important;
-  color: var(--mid) !important;
-  transition: color 0.3s;
-}
-.social-icons a:hover {
-  color: var(--gold) !important;
-}
-
 @media (max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
 
 /* page hero (interior pages) */
