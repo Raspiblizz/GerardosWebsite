@@ -5,7 +5,7 @@ echo Generando sitio_web.zip...
 if exist sitio_web.zip del sitio_web.zip
 
 :: Comprimir los archivos y carpetas necesarios usando PowerShell
-powershell -Command "Compress-Archive -Path 'assets', '*.html', '*.php', '.htaccess' -DestinationPath 'sitio_web.zip' -Force"
+powershell -Command "Compress-Archive -Path 'assets', '*.html', '*.php' -DestinationPath 'sitio_web.zip' -Force"
 
 echo.
 echo =======================================================

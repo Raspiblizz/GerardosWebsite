@@ -1,0 +1,18 @@
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Compilados / Empaquetados locales
+sitio_web.zip
+
+# Scripts temporales de automatización
+*.ps1
+
+# Carpetas de Editores / IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
