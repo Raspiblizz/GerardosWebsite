@@ -461,3 +461,8 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;}
 .reveal.in{opacity:1;transform:translateY(0);}
 
 ::selection{background:var(--gold);color:#151109;}
+
+/* ---------- nav shop icon ---------- */
+.nav-shop{display:flex;align-items:center;justify-content:center;color:var(--hi);transition:color .25s ease,opacity .25s ease;opacity:.9;}
+.nav-shop:hover{color:var(--gold);opacity:1;}
+.nav-shop svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}

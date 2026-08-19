@@ -22,6 +22,7 @@
       <a href="contacto.html" data-es>Contacto</a><a href="contacto.html" data-en>Contact</a>
     </nav>
     <div class="nav-right">
+      <a class="nav-shop" href="pedido.html" aria-label="Shop / Tienda"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg></a>
       <div class="lang-toggle">
         <button data-set="es">ES</button>
         <button data-set="en">EN</button>
@@ -152,39 +153,6 @@
           </div>
 
         </div>
-
-        <h3 class="order-h3" style="margin-top:48px;" data-es>2. Tus datos</h3>
-        <h3 class="order-h3" style="margin-top:48px;" data-en>2. Your details</h3>
-
-        <form class="contact-form" id="order-form" name="pedido" method="POST" action="order-handler.php">
-          <p style="position:absolute;left:-9999px;" aria-hidden="true"><label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-          <div class="field">
-            <label data-es>Nombre completo</label><label data-en>Full name</label>
-            <input type="text" id="f-name" name="name" required>
-          </div>
-          <div class="field">
-            <label data-es>Tel&eacute;fono</label><label data-en>Phone</label>
-            <input type="tel" id="f-phone" name="phone" required>
-          </div>
-          <div class="field">
-            <label data-es>Zona de entrega</label><label data-en>Delivery area</label>
-            <select id="f-zone" name="zone" required>
-              <option value="" data-es data-en disabled selected></option>
-              <option value="Pachuca, Hidalgo">Pachuca, Hidalgo</option>
-              <option value="Ciudad de México" data-es>Ciudad de M&eacute;xico</option>
-              <option value="Mexico City" data-en>Mexico City</option>
-            </select>
-          </div>
-          <div class="field">
-            <label data-es>Direcci&oacute;n de entrega</label><label data-en>Delivery address</label>
-            <textarea id="f-address" name="address" rows="3" required></textarea>
-          </div>
-          <div class="field">
-            <label data-es>Notas (opcional)</label><label data-en>Notes (optional)</label>
-            <textarea id="f-notes" name="notes" rows="2"></textarea>
-          </div>
-        </form>
       </div>
 
       <div class="reveal">
@@ -214,6 +182,39 @@
 
           <p id="min-warning" class="min-warning" data-es>Pedido m&iacute;nimo: 6 botellas &mdash; llev&aacute;s <span id="min-count">0</span>.</p>
           <p id="min-warning-en" class="min-warning" data-en>6-bottle minimum &mdash; you have <span id="min-count-en">0</span>.</p>
+
+          <h3 class="order-h3" style="margin-top:28px;font-size:18px;" data-es>2. Tus datos</h3>
+          <h3 class="order-h3" style="margin-top:28px;font-size:18px;" data-en>2. Your details</h3>
+
+          <form class="contact-form" id="order-form" name="pedido" method="POST" action="order-handler.php">
+            <p style="position:absolute;left:-9999px;" aria-hidden="true"><label>No llenar: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+            <div class="field">
+              <label data-es>Nombre completo</label><label data-en>Full name</label>
+              <input type="text" id="f-name" name="name" required>
+            </div>
+            <div class="field">
+              <label data-es>Tel&eacute;fono</label><label data-en>Phone</label>
+              <input type="tel" id="f-phone" name="phone" required>
+            </div>
+            <div class="field">
+              <label data-es>Zona de entrega</label><label data-en>Delivery area</label>
+              <select id="f-zone" name="zone" required>
+                <option value="" data-es data-en disabled selected></option>
+                <option value="Pachuca, Hidalgo">Pachuca, Hidalgo</option>
+                <option value="Ciudad de México" data-es>Ciudad de M&eacute;xico</option>
+                <option value="Mexico City" data-en>Mexico City</option>
+              </select>
+            </div>
+            <div class="field">
+              <label data-es>Direcci&oacute;n de entrega</label><label data-en>Delivery address</label>
+              <textarea id="f-address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="field">
+              <label data-es>Notas (opcional)</label><label data-en>Notes (optional)</label>
+              <textarea id="f-notes" name="notes" rows="2"></textarea>
+            </div>
+          </form>
 
           <div class="order-actions">
             <button type="button" id="btn-whatsapp" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:14px;" disabled>
