@@ -2,7 +2,6 @@
 (function () {
   "use strict";
 
-  var SHIPPING = 100;
   var MIN_BOTTLES = 6;
   var WHATSAPP_NUMBER = "529989063867"; /* +52 998 906 3867 */
   var ORDER_EMAIL = "oscar.chavez@vinosgerardos.com";
@@ -10,17 +9,12 @@
   document.addEventListener("DOMContentLoaded", function () {
     var items = Array.prototype.slice.call(document.querySelectorAll(".order-item"));
     var summaryLines = document.getElementById("summary-lines");
-    var sumSubtotal = document.getElementById("sum-subtotal");
-    var sumShipping = document.getElementById("sum-shipping");
-    var sumTotal = document.getElementById("sum-total");
     var minCount = document.getElementById("min-count");
     var minCountEn = document.getElementById("min-count-en");
     var minWarning = document.getElementById("min-warning");
     var minWarningEn = document.getElementById("min-warning-en");
     var btnWhatsapp = document.getElementById("btn-whatsapp");
     var btnEmail = document.getElementById("btn-email");
-
-    sumShipping.textContent = fmt(SHIPPING);
 
     /* ---------- qty steppers ---------- */
     items.forEach(function (item) {
@@ -42,30 +36,21 @@
       });
     });
 
-    function fmt(n) {
-      return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    }
-
     function getLines() {
       var lines = [];
       var totalBottles = 0;
-      var subtotal = 0;
       items.forEach(function (item) {
         var qty = parseInt(item.querySelector(".qty-input").value, 10) || 0;
         if (qty > 0) {
-          var price = parseFloat(item.getAttribute("data-price"));
           lines.push({
             nameEs: item.getAttribute("data-name-es"),
             nameEn: item.getAttribute("data-name-en"),
-            qty: qty,
-            price: price,
-            lineTotal: qty * price
+            qty: qty
           });
           totalBottles += qty;
-          subtotal += qty * price;
         }
       });
-      return { lines: lines, totalBottles: totalBottles, subtotal: subtotal };
+      return { lines: lines, totalBottles: totalBottles };
     }
 
     function recalc() {
@@ -94,20 +79,12 @@
           var nameSpanEn = document.createElement("span");
           nameSpanEn.setAttribute("data-en", "");
           nameSpanEn.textContent = l.nameEn + " × " + l.qty;
-          var priceSpan = document.createElement("span");
-          priceSpan.textContent = fmt(l.lineTotal);
           row.appendChild(nameSpanEs);
           row.appendChild(nameSpanEn);
-          row.appendChild(priceSpan);
           summaryLines.appendChild(row);
         });
       }
 
-      var shipping = data.subtotal > 0 ? SHIPPING : 0;
-      var total = data.subtotal + shipping;
-      sumSubtotal.textContent = fmt(data.subtotal);
-      sumShipping.textContent = fmt(shipping);
-      sumTotal.textContent = fmt(total);
       minCount.textContent = data.totalBottles;
       minCountEn.textContent = data.totalBottles;
 
@@ -130,20 +107,14 @@
       var zone = document.getElementById("f-zone").value;
       var address = document.getElementById("f-address").value.trim();
       var notes = document.getElementById("f-notes").value.trim();
-      var shipping = data.subtotal > 0 ? SHIPPING : 0;
-      var total = data.subtotal + shipping;
-
       var lines = data.lines.map(function (l) {
         var name = lang === "en" ? l.nameEn : l.nameEs;
-        return "• " + name + " x" + l.qty + " — " + fmt(l.lineTotal);
+        return "• " + name + " x" + l.qty;
       }).join("\n");
 
       if (lang === "en") {
         return "Hi Gerardo's! I'd like to place an order:\n\n" +
           lines + "\n\n" +
-          "Subtotal: " + fmt(data.subtotal) + "\n" +
-          "Delivery: " + fmt(shipping) + "\n" +
-          "Total: " + fmt(total) + "\n\n" +
           "Delivery details:\n" +
           "Name: " + name + "\n" +
           "Phone: " + phone + "\n" +
@@ -154,9 +125,6 @@
       }
       return "¡Hola Gerardo's! Quiero hacer un pedido:\n\n" +
         lines + "\n\n" +
-        "Subtotal: " + fmt(data.subtotal) + "\n" +
-        "Envío: " + fmt(shipping) + "\n" +
-        "Total: " + fmt(total) + "\n\n" +
         "Datos de entrega:\n" +
         "Nombre: " + name + "\n" +
         "Teléfono: " + phone + "\n" +
@@ -198,7 +166,6 @@
             address: document.getElementById("f-address").value.trim(),
             notes: document.getElementById("f-notes").value.trim(),
             items: itemsSummary,
-            total: document.getElementById("sum-total").textContent,
             channel: channel
           })
         }).catch(function () { /* silent — WhatsApp/email is the primary channel */ });

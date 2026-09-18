@@ -436,7 +436,6 @@ footer{background:#000;border-top:1px solid var(--line);padding:70px 0 30px;}
 .order-item img{width:52px;height:78px;object-fit:contain;flex-shrink:0;}
 .oi-info{flex:1;min-width:0;}
 .oi-info h4{font-size:18px;margin-bottom:4px;}
-.oi-price{color:var(--gold);font-family:var(--utility);font-size:13.5px;letter-spacing:.04em;}
 .qty-stepper{display:flex;align-items:center;border:1px solid var(--line-strong);flex-shrink:0;}
 .qty-btn{background:transparent;border:0;color:var(--hi);width:34px;height:34px;font-size:16px;cursor:pointer;font-family:var(--utility);transition:color .2s,background .2s;}
 .qty-btn:hover{color:var(--gold);background:var(--panel);}
