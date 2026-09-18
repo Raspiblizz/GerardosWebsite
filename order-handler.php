@@ -41,13 +41,12 @@ $zone    = isset($_POST["zone"]) ? clean($_POST["zone"]) : "";
 $address = isset($_POST["address"]) ? clean($_POST["address"]) : "";
 $notes   = isset($_POST["notes"]) ? clean($_POST["notes"]) : "";
 $items   = isset($_POST["items"]) ? clean($_POST["items"]) : "";
-$total   = isset($_POST["total"]) ? clean($_POST["total"]) : "";
 $channel = isset($_POST["channel"]) ? clean($_POST["channel"]) : "";
 
 $mail_body =
     "Canal / Channel: " . $channel . "\n\n" .
     "Vinos / Items: " . $items . "\n" .
-    "Total: " . $total . "\n\n" .
+    "\n" .
     "Nombre / Name: " . $name . "\n" .
     "Tel\xC3\xA9fono / Phone: " . $phone . "\n" .
     "Zona / Area: " . $zone . "\n" .
